@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios a la oficina de reparto</title>
+    <!-- Incluir Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilos generales */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Encabezado con imagen de fondo */
+        header {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background: url('https://news.samsung.com/latin/wp-content/themes/sw_newsroom/download.php?id=9Z4%2B4mXCXspo8WJipQMxpA%3D%3D') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+        
+        header h1 {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px 40px;
+            border-radius: 10px;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        
+        /* Navegación */
+        nav {
+            background-color: #4CAF50;
+            padding: 10px 0;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            background-color: #45a049;
+            border-radius: 5px;
+        }
+        
+        /* Contenido principal */
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        section h2 {
+            margin-bottom: 20px;
+            color: #4CAF50;
+            font-size: 2em;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        
+        /* Tabla resaltada */
+        .highlight-row {
+            background-color: orange;
+            color: #fff;
+        }
+        
+        /* Pie de página */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            header {
+                height: 200px;
+            }
+            
+            header h1 {
+                font-size: 2em;
+                padding: 15px 30px;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            main {
+                margin: 20px auto;
+            }
+            
+            section h2 {
+                font-size: 1.5em;
+            }
+        }
+
+        /* Estilos para el iframe */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 250%; /* Ancho 2.5 veces más grande */
+            margin: 20px auto; /* Centramos el iframe */
+        }
+        
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Órdenes recibidas para el despacho</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section>
+            <h2>Detalles de las Órdenes</h2>
+            <p>A continuación se presentan los detalles de las órdenes recibidas para el despacho:</p>
+            
+            <!-- Hipervínculo agregado -->
+            <p><a href="https://docs.google.com/spreadsheets/d/1gGsixO9McgkVDxVTkox6L943mmd5Q27l1-cB6Xa2jqU/edit?usp=sharing" target="_blank">Haz click aquí para ver tabla de datos</a></p>
+            
+            <!-- Nueva tabla con Bootstrap -->
+            <table class="table table-bordered table-striped">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Número</th>
+                        <th>Fecha</th>
+                        <th>Nevera</th>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Pesos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="highlight-row">
+                        <td>1</td>
+                        <td>2024-08-28 7:16:38</td>
+                        <td>neveraSuperCooler</td>
+                        <td>huevos</td>
+                        <td>10</td>
+                        <td>30000</td>
+                    </tr>
+                    <!-- Puedes añadir más filas aquí -->
+                </tbody>
+            </table>
+        </section>
+        
+        <section>
+            <h2>Productos Disponibles</h2>
+            <p>Estos son los productos actualmente disponibles para el despacho:</p>
+            <table class="table table-bordered table-striped">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Producto</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Producto A</td>
+                        <td>Descripción del Producto A</td>
+                        <td>$50.00</td>
+                        <td>20 unidades</td>
+                    </tr>
+                    <tr>
+                        <td>Producto B</td>
+                        <td>Descripción del Producto B</td>
+                        <td>$35.00</td>
+                        <td>15 unidades</td>
+                    </tr>
+                    <tr>
+                        <td>Producto C</td>
+                        <td>Descripción del Producto C</td>
+                        <td>$25.00</td>
+                        <td>30 unidades</td>
+                    </tr>
+                    <!-- Puedes añadir más filas aquí -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección del iframe -->
+        <section>
+            <h2>Datos de la Hoja de Cálculo</h2>
+            <div class="iframe-container">
+                <iframe src="https://docs.google.com/spreadsheets/d/1gGsixO9McgkVDxVTkox6L943mmd5Q27l1-cB6Xa2jqU/pubhtml?widget=true&amp;headers=false"></iframe>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Oficina de Despachos. Todos los derechos reservados.</p>
+    </footer>
+    
+    <!-- Incluir Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.10/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
